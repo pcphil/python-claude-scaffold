@@ -1,0 +1,22 @@
+services:
+  agent:
+    build: .
+    env_file: .env
+    volumes:
+      - .:/app
+      - /app/.memory
+    command: python -m src.agent.run
+
+  test:
+    build: .
+    env_file: .env
+    volumes:
+      - .:/app
+    command: pytest tests/unit/ -v --tb=short
+
+  lint:
+    build: .
+    volumes:
+      - .:/app
+    command: >
+      sh -c "ruff check src/ tests/ && mypy src/"

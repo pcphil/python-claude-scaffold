@@ -1,0 +1,13 @@
+{
+  "name": "claude-scaffold-scripts",
+  "version": "0.1.0",
+  "description": "Node.js utility scripts for the Claude scaffold",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate-env": "node utils/validate-env.mjs"
+  },
+  "license": "MIT"
+}
