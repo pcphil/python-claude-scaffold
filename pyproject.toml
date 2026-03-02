@@ -24,11 +24,8 @@ dev = [
     "pre-commit",
 ]
 
-[project.scripts]
-claude-agent = "src.agent.run:main"
-
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = [{include = "project_name", from = "src"}]
 
 [tool.ruff]
 target-version = "py311"
@@ -41,7 +38,7 @@ ignore = []
 [tool.mypy]
 strict = true
 python_version = "3.11"
-exclude = ["tests/", "src/scripts/"]
+exclude = ["tests/"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
@@ -51,5 +48,4 @@ markers = [
 testpaths = ["tests"]
 
 [tool.coverage.run]
-source = ["src"]
-omit = ["src/scripts/*"]
+source = ["src/project_name"]
