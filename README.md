@@ -1,12 +1,12 @@
 # Python + Node.js Claude Scaffold
 
 A clean, forkable boilerplate for building Claude-powered Python applications.
-Provides project structure, tooling, and `.agent/` prompts pre-wired — ready
+Provides project structure, tooling, and `.claude/prompts/` pre-wired — ready
 for you to add your implementation.
 
 ## Features
 
-- **`.agent/` prompts** — declarative Markdown skills, personas, and strategies
+- **`.claude/prompts/`** — declarative Markdown skills, personas, and strategies
 - **`.claude/` harnesses** — hooks, slash commands, and settings wired up
 - **Typed skeleton** — `src/project_name/` ready to rename and implement
 
@@ -40,14 +40,13 @@ src/
     ├── config/
     └── utils/
 
-.agent/             # Declarative Markdown → injected into system prompts
-├── skills/         # chain_of_thought.md, self_critique.md
-├── personas/       # engineer.md, researcher.md
-└── strategies/     # workflow.md, research_workflow.md
-
 .claude/            # Claude Code harnesses
 ├── commands/       # /commit, /test, /review, /lint
-└── hooks/          # post-write-format.sh, session-start-banner.sh
+├── hooks/          # post-write-format.sh, session-start-banner.sh
+└── prompts/        # Declarative Markdown → injected into system prompts
+    ├── skills/     # chain_of_thought.md, self_critique.md
+    ├── personas/   # engineer.md, researcher.md
+    └── strategies/ # workflow.md, research_workflow.md
 ```
 
 ## Development

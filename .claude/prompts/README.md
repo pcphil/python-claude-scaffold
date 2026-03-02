@@ -1,4 +1,4 @@
-# .agent/ — Declarative Agent Prompts
+# .claude/prompts/ — Declarative Agent Prompts
 
 This directory contains Markdown files that are loaded at runtime and injected
 into the Claude system prompt.  Each file is self-contained and focuses on a
@@ -7,7 +7,7 @@ single concern.
 ## Directory Layout
 
 ```
-.agent/
+.claude/prompts/
 ├── skills/         # Reasoning and response techniques
 ├── personas/       # Role-specific behaviour profiles
 └── strategies/     # High-level workflow patterns

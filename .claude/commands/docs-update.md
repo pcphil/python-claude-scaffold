@@ -24,7 +24,7 @@ so they accurately reflect the current state of the project.
    - Read `pyproject.toml` for dependencies and entry points.
    - Read `CLAUDE.md` for the authoritative project description.
    - Glob `.claude/commands/*.md` to list current slash commands.
-   - Glob `.agent/**/*.md` to list current agent skills, personas, and strategies.
+   - Glob `.claude/prompts/**/*.md` to list current agent skills, personas, and strategies.
 
 4. **Determine scope** from `$ARGUMENTS`
    - No argument or `--all`: update both README and architecture docs.
@@ -33,7 +33,7 @@ so they accurately reflect the current state of the project.
 
 5. **Update README.md** (unless `--arch-only`)
 
-   Apply the docs_writer style guide (`.agent/skills/docs_writer.md`):
+   Apply the docs_writer style guide (`.claude/prompts/skills/docs_writer.md`):
    - Features list reflects actual capabilities; mark stubs `(stub — NotImplementedError)`.
    - Quick Start commands use `uv venv` / `uv pip install` pattern from `CLAUDE.md`.
    - Project Structure tree reflects actual directories and key files.

@@ -7,7 +7,7 @@ session before making any changes.
 
 This is a **Python + Node.js boilerplate** for Claude-powered applications.
 `src/` is intentionally empty — rename `src/project_name/` to your package name
-and start implementing. The tooling, hooks, and `.agent/` prompts are pre-wired.
+and start implementing. The tooling, hooks, and `.claude/prompts/` are pre-wired.
 
 ## Key Files
 
@@ -16,7 +16,7 @@ and start implementing. The tooling, hooks, and `.agent/` prompts are pre-wired.
 | `src/project_name/` | Rename to your package; add modules here |
 | `src/project_name/config/` | Configuration helpers |
 | `src/project_name/utils/` | Shared utilities |
-| `.agent/` | Declarative Markdown prompts (skills, personas, strategies) |
+| `.claude/prompts/` | Declarative Markdown prompts (skills, personas, strategies) |
 | `.claude/commands/` | Slash commands: `/commit`, `/test`, `/review`, `/lint` |
 | `tasks/todo.md` | Current task list |
 | `tasks/lessons.md` | Post-correction patterns |

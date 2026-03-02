@@ -6,7 +6,7 @@
 CLI (src/agent/run.py)
     └── AgentLoop (src/agent/loop.py)
             ├── AgentSkillLoader (src/agent/skill_loader.py)
-            │       └── .agent/skills/*.md
+            │       └── .claude/prompts/skills/*.md
             ├── ContextManager (src/memory/context_manager.py)
             │       ├── ShortTermMemory
             │       └── LongTermMemory (.memory/long_term.json)
@@ -39,7 +39,7 @@ Tool schemas live in `src/tools/definitions.py` and are passed as-is to the
 Anthropic API.  Handlers in `src/tools/handlers.py` receive the `input` dict
 and return a JSON-serialisable result.
 
-### `.agent/` Prompts
+### `.claude/prompts/` Prompts
 Declarative Markdown loaded at runtime by `AgentSkillLoader`.  No code in these
 files — only instructions for the model.  This keeps prompt engineering separate
 from application logic.
@@ -50,5 +50,5 @@ from application logic.
 |---------|-------------|
 | New memory backend | Implement `LongTermMemoryProtocol`, swap in `ContextManager` |
 | New tool | Add definition to `definitions.py`, add handler to `handlers.py`, register in `build_tool_registry` |
-| New skill | Add `*.md` to `.agent/skills/` and/or add a `BaseSkill` subclass to `src/skills/` |
-| New persona/strategy | Add `*.md` to `.agent/personas/` or `.agent/strategies/` |
+| New skill | Add `*.md` to `.claude/prompts/skills/` and/or add a `BaseSkill` subclass to `src/skills/` |
+| New persona/strategy | Add `*.md` to `.claude/prompts/personas/` or `.claude/prompts/strategies/` |

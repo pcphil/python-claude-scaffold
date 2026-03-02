@@ -56,7 +56,7 @@ src/
 ├── agent/
 │   ├── loop.py          # AgentLoop (stub)
 │   ├── run.py           # CLI entry point
-│   └── skill_loader.py  # Loads .agent/*.md
+│   └── skill_loader.py  # Loads .claude/prompts/*.md
 ├── memory/
 │   ├── short_term.py    # ShortTermMemory (stub)
 │   ├── long_term.py     # LongTermMemory (stub)

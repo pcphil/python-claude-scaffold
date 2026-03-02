@@ -8,8 +8,6 @@
 
 set -euo pipefail
 
-SENTINEL="${TMPDIR:-/tmp}/.claude-banner-shown-$$"
-
 # Only print once per shell session (process group)
 SENTINEL="/tmp/.claude-banner-${PPID}"
 if [[ -f "$SENTINEL" ]]; then

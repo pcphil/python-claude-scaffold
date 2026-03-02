@@ -3,7 +3,7 @@
 Skills are modular, composable capabilities that extend the agent's behaviour.
 There are two kinds:
 
-## 1. Prompt Skills (`.agent/skills/*.md`)
+## 1. Prompt Skills (`.claude/prompts/skills/*.md`)
 
 Declarative Markdown files loaded by `AgentSkillLoader` and injected into the
 system prompt.  They describe *how* the model should reason or respond.
@@ -19,7 +19,7 @@ Examples: `src/skills/example/skill.py`
 
 ## Adding a Prompt Skill
 
-1. Create `.agent/skills/<name>.md`.
+1. Create `.claude/prompts/skills/<name>.md`.
 2. Write clear, actionable instructions (see existing skills for format).
 3. Activate via `--skill <name>` on the CLI or `AgentConfig.skills`.
 
